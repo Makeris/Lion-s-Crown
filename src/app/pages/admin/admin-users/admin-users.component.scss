@@ -1,0 +1,41 @@
+
+
+.fontWeightBold {
+    font-weight: bold;
+}
+
+.adminPanel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.adminAside {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    height:fit-content;
+}
+
+.adminPanelFields {
+    color: black;
+    height: 700px;
+    overflow-y: scroll;
+    
+
+    padding: 10px;
+
+    width: 78%;
+    background-color: #fff;
+    border: 1px solid cyan;
+    border-radius: 10px;
+    min-height: 100px;
+
+
+
+}
+

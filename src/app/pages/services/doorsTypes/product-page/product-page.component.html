@@ -1,0 +1,59 @@
+<main class="main" style="color: white; padding: 80px 5%">
+
+    <h1 style="text-align: center;">{{ currentProduct[0]?.className | uppercase}}</h1>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol  style="text-transform: uppercase; background-color: black; margin-bottom: 30px; font-size: 1rem;" class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page" [routerLink]="[ '/services']">Services</li>
+          <li class="breadcrumb-item" aria-current="page" [routerLink]="[ '/services/', currentProduct[0]?.className | lowercase]">{{currentProduct[0]?.className}}</li>
+          <li class="breadcrumb-item active" aria-current="page">PRODUCTS</li>
+          <!-- <li class="breadcrumb-item active" [routerLink]="[ '/services/', currentClass | lowercase ]">{{currentClass}}</li> -->
+        </ol>
+      </nav>
+
+    <div class="entraceDoorsSelector">
+        <div  *ngFor="let product of currentProduct; let i = index" class="entraceDoorItem" class="entraceDoorItem square" [routerLink]="[ '/services/', currentProduct[0].className, currentProduct[0]?.type, 'productPage' ,product.id]">
+                
+                <div class="test"></div>
+                
+                    <div class="entraceDoorImage">
+                        <img [src]="product.image" class="card-img-top" alt="...">
+                    </div>
+                <div class="entraceDoorTitle"> 
+                    <p style="text-align: center; text-transform: uppercase;">
+                        {{product?.name}}
+                        
+                    </p>
+                        
+                </div>
+            </div>
+    </div>
+
+<!-- 
+    <div class="test d-flex" >
+
+        <div [routerLink]="[ '/services/furniture']" class="square three">
+            <div class="content">
+             <p>TEXT</p>
+            
+            </div>
+          </div>
+        <div [routerLink]="[ '/services/furniture']" class="square three">
+            <div class="content">
+             <p>TEXT</p>
+            
+            </div>
+          </div>
+        <div [routerLink]="[ '/services/furniture']" class="square three">
+            <div class="content">
+             <p>TEXT</p>
+            
+            </div>
+          </div>
+    </div> -->
+
+
+
+</main>
+
+

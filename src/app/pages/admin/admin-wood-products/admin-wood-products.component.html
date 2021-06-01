@@ -1,0 +1,172 @@
+
+<!-- MODAL1 -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Info about product:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+          <p><span class="boldTitle">Article:</span> {{viewedProduct?.article | uppercase}}</p>
+          <p><span class="boldTitle">Minimal Size:</span> {{viewedProduct?.minSize}}</p>
+          <p><span class="boldTitle">Maximal Size:</span> {{viewedProduct?.maxSize}}</p>
+  
+          <p><span class="boldTitle">Description:</span> <br> {{viewedProduct?.description}}</p>
+          <p><span class="boldTitle">Image:</span> <br> </p>
+            <div style="max-width: 200px;">
+              <img style="width: 100%; height: 100%; background-size: cover;" class="card-img-top" [src]="viewedProduct?.image" alt="">
+            </div>
+
+            
+           
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- MODAL2 -->
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Create new product</h5>
+          <button (click)="clearFields()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+
+                <p class="mt-2">Name:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodName" name="woodName" type="text" class="form-control mt-1" placeholder="Enter name...">
+                <p class="mt-2">Article:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodArticle" name="woodArticle" type="text" class="form-control mt-1" placeholder="Enter article...">
+                <p class="mt-2">Minimal Size:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodMinSize" name="woodMinSize" type="text" class="form-control mt-1" placeholder="Enter minimal size in format: 'a X b'.">
+                <p class="mt-2">Max Size:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodMaxSize" name="woodMaxSize" type="text" class="form-control mt-1" placeholder="Enter max size in format: 'a X b'.">
+                <p class="mt-2">Description:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodDescription" name="woodDescription" type="text" class="form-control mt-1" placeholder="Enter description...">
+                <!-- <p class="mt-2">Price:</p>
+                <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="woodPrice" name="woodPrice" type="text" class="form-control mt-1" placeholder="Enter count..."> -->
+                <p class="mt-2">Image:</p>
+                
+
+
+
+
+                <div class="custom-file">
+                    <label  for="my-input" class="custom-file-label">Upload image</label>
+                    <input (change)="uploadFile($event)" id="my-input" class="custom-file-input" type="file" name="">
+                </div>
+                <div *ngIf="isUploaded == true" class="progress mt-3">
+                    <div id="progressImg" class="progress-bar progress-bar-striped bg-dark" [style.width]="(uploadProgress | async) + '%' " role="progressbar" 
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+               
+
+            </form>
+
+
+
+          
+        </div>
+        <div class="modal-footer">
+        
+          <button *ngIf="isCreate" (click)="fieldsTest(); addNewProductInDB()" type="button" [disabled]="isFieldsFulled" class="btn btn-success" data-bs-dismiss="modal">Add new</button>
+          <button (click)="clearFields()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="isEdit" (click)="saveEdit()" type="button" class="btn btn-primary" [disabled]="isFieldsFulled" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h4 style="text-align: center; text-transform: uppercase;">Admin</h4>
+<main style="color: white; padding: 80px 5%;">
+    
+
+    <div class="adminPanel">
+
+      <aside class="adminAside">
+            
+        <div class="btn-group-vertical d-grid gap-2">
+            
+            <a [routerLink]="[ '/admin' ]">
+                <button class="btn-dark btn">Door Products</button>
+            </a>
+            <a [routerLink]="[ '/admin/adminWoodProducts' ]">
+                <button class="btn-dark btn">Wood Products</button>
+            </a>
+            <a [routerLink]="[ '/admin/adminOrders' ]">
+                <button class="btn-dark btn">All orders</button>
+            </a>
+            <!-- <a [routerLink]="[ '/admin/usersList' ]">
+                <button class="btn-dark btn">All Users</button>
+            </a> -->
+            <a [routerLink]="[ '/admin/subCategory' ]">
+                <button class="btn-dark btn">Sub Categoty & else</button>
+            </a>
+            <!-- <button class="btn-dark btn"></button>
+            <button class="btn-dark btn">Button</button>
+            <button class="btn-dark btn">Button</button> -->
+          </div>
+    </aside>
+
+
+        <div class="adminPanelFields">
+            <div class="newProductField">
+
+                <div class="searcher d-flex">
+                    <input [(ngModel)]="searchProduct" name="searchProduct" type="text" class="form-control mr-2" placeholder="Search product...">
+                    <button (click)="isEdit = false; isCreate = true; getCureentLastID()" style="width: 100%"  class="btn-success btn-block btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add new product</button>
+                </div>
+
+                <table class="adminProductsTable table table-light">
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Article</th>
+                        <th>Min Size</th>
+                        <th>Max Size</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+
+                    <tbody>
+                       
+                        <tr *ngFor="let product of allWoodProducts | woodProductsPipe: searchProduct ;let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.article }}</td>
+                            <td>{{ product.minSize }}</td>
+                            <td>{{ product.maxSize }}</td>
+                            <td>
+                                <button (click)="viewItem(product)" type="button" class="btn-dark btn" data-bs-toggle="modal" data-bs-target="#exampleModal" >View</button>
+                            </td>
+                            <td>
+                                <button (click)="editItem(product); fieldsTest(); isEdit = true; isCreate = false" type="button" class="btn-warning btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button>
+                            </td>
+                            <td>
+                                <button (click)="deleteItem(product)" type="button" class="btn-danger btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

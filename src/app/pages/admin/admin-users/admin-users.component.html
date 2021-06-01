@@ -1,0 +1,68 @@
+<p>admin-users works!</p>
+<main style="color: white; padding: 80px 5%;">
+    <div class="adminPanel">
+
+        <aside class="adminAside">
+            
+            <div class="btn-group-vertical d-grid gap-2">
+                
+                <a [routerLink]="[ '/admin' ]">
+                    <button class="btn-dark btn">Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminWoodProducts' ]">
+                    <button class="btn-dark btn">Wood Products</button>
+                </a>
+                <button class="btn-dark btn">Button</button>
+                <button class="btn-dark btn">Button</button>
+                <button class="btn-dark btn">Button</button>
+              </div>
+        </aside>
+
+        <div class="adminPanelFields">
+            <div class="newProductField">
+
+                <div class="searcher d-flex">
+                    <input [(ngModel)]="searchProduct" name="searchProduct" type="text" class="form-control mr-2" placeholder="Search order...">
+                    <!-- <button (click)="isEdit = false; isCreate = true; getCureentLastID()" style="width: 100%"  class="btn-success btn-block btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add new product</button> -->
+                </div>
+
+                <table class="adminProductsTable table table-light">
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Street</th>
+                        <th>House</th>
+                        <th>View Order</th>
+                        <th>Confirm</th>
+                    </thead>
+
+                    <tbody>
+                       
+                        <!-- <tr *ngFor="let order of allOrders | adminOrdersPipe: searchProduct ;let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ order.userName }}</td>
+                            <td>{{ order.userPhone }}</td>
+                            <td>{{ order.userCity }}</td>
+                            <td>{{ order.userStreet }}</td>
+                            <td>{{ order.userHouse }}</td>
+                            
+                            <td>
+                                <button (click)="viewItem(order, order.allOrders)" type="button" class="btn-dark btn" data-bs-toggle="modal" data-bs-target="#exampleModal">View order</button>
+                            </td>
+                            <td>
+                                <button (click)="deleteItem(order)" type="button" class="btn-danger btn">Delete</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                    
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

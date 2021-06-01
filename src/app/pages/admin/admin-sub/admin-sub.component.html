@@ -1,0 +1,111 @@
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Type brand</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <input [(ngModel)]="newBrand" (keyup)='fieldsCheck()' class="form-control" type="text" name="newBrand" placeholder="Type new item...">
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button [disabled]='isNewBrandFulled' (click)="AddNewBrand(newItem)" type="button" class="btn btn-dark" data-bs-dismiss="modal">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<main style="color: white; padding: 80px 5%;">
+    <div class="adminPanel">
+
+        <aside class="adminAside">
+            
+            <div class="btn-group-vertical d-grid gap-2">
+                
+                <a [routerLink]="[ '/admin' ]">
+                    <button class="btn-dark btn">Door Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminWoodProducts' ]">
+                    <button class="btn-dark btn">Wood Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminOrders' ]">
+                    <button class="btn-dark btn">All orders</button>
+                </a>
+                <!-- <a [routerLink]="[ '/admin/usersList' ]">
+                    <button class="btn-dark btn">All Users</button>
+                </a> -->
+                <a [routerLink]="[ '/admin/subCategory' ]">
+                    <button class="btn-dark btn">Sub Categoty & else</button>
+                </a>
+                <!-- <button class="btn-dark btn"></button>
+                <button class="btn-dark btn">Button</button>
+                <button class="btn-dark btn">Button</button> -->
+              </div>
+        </aside>
+
+        <div class="adminPanelFields">
+            <div class="newProductField">
+
+                <div class="searcher d-flex">
+                    <!-- <input [(ngModel)]="searchProduct" name="searchProduct" type="text" class="form-control mr-2" placeholder="Search something..."> -->
+                    <!-- <button (click)="isEdit = false; isCreate = true; getCureentLastID()" style="width: 100%"  class="btn-success btn-block btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add new product</button> -->
+                </div>
+
+                <div class="form-group mt-2 d-flex">
+                    
+                    <select [(ngModel)]="brandSelector" id="my-select" class="form-control" name="brandSelector">
+                        <option selected disabled value="">Avalible brands</option>
+                        <option *ngFor="let brand of avalibleBrands" [value]="brand">{{brand}}</option>
+                    </select>
+                    <button (click)="currentChange = 1" type="button" class="ml-2 btn btn-block btn-dark"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+                    <button (click)="deleteBrand()" type="button" class="ml-2 btn btn-block btn-primary">Delete</button>
+                </div>
+
+
+
+
+                <table class="adminProductsTable table table-light">
+                    <thead>
+                       
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        
+                    </thead>
+
+                    <tbody>
+                       
+                        <tr *ngFor="let item of allItems;let i = index">
+                            <td style="text-transform: uppercase;"> {{item.className}} </td>
+                            <td>
+                                <select [(ngModel)]="categorySelect" class="form-control" name="categorySelect">
+                                    <option value="" selected disabled>Avalible Types</option>
+                                    <option  *ngFor="let type of item.types" [value]="type">{{type | uppercase}}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button (click)="currentChange = 2; preEdit(item)" type="button" class="btn-warning btn" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD</button>
+                            </td>
+                            <td>
+                                <button (click)="deleteCatetegory(item)" type="button" class="btn-danger btn">Delete</button>
+                            </td>
+                      
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+

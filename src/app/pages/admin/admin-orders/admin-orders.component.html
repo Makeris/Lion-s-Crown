@@ -1,0 +1,125 @@
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Order info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="table" style="overflow-x: scroll;">
+                <thead>
+                    <th>№</th>
+                    <th>NAME</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                    <th>Article</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orderInfo; let i = index" style="font-size: 0.7rem;">
+                        <td>{{i+1}}</td>
+                        <td>{{order.name}}</td>
+                        <td>{{order.count}}</td>
+                        <td *ngIf="order.price*1 == order.price">{{order.price}}</td>
+                        <td *ngIf="order.price*1 != order.price" style="color: red">As agreet</td>
+                        <td>{{order.article}}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    Total price: {{fullOrder?.totalPrice}}
+                </tfoot>
+                
+            </div>
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<main style="color: white; padding: 80px 5%;">
+    <div class="adminPanel">
+
+        <aside class="adminAside">
+            
+            <div class="btn-group-vertical d-grid gap-2">
+                
+                <a [routerLink]="[ '/admin' ]">
+                    <button class="btn-dark btn">Door Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminWoodProducts' ]">
+                    <button class="btn-dark btn">Wood Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminOrders' ]">
+                    <button class="btn-dark btn">All orders</button>
+                </a>
+                <!-- <a [routerLink]="[ '/admin/usersList' ]">
+                    <button class="btn-dark btn">All Users</button>
+                </a> -->
+                <a [routerLink]="[ '/admin/subCategory' ]">
+                    <button class="btn-dark btn">Sub Categoty & else</button>
+                </a>
+                <!-- <button class="btn-dark btn"></button>
+                <button class="btn-dark btn">Button</button>
+                <button class="btn-dark btn">Button</button> -->
+              </div>
+        </aside>
+
+        <div class="adminPanelFields">
+            <div class="newProductField">
+
+                <div class="searcher d-flex">
+                    <input [(ngModel)]="searchProduct" name="searchProduct" type="text" class="form-control mr-2" placeholder="Search order...">
+                    <!-- <button (click)="isEdit = false; isCreate = true; getCureentLastID()" style="width: 100%"  class="btn-success btn-block btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add new product</button> -->
+                </div>
+
+                <table class="adminProductsTable table table-light">
+                    <thead>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Street</th>
+                        <th>House</th>
+                        <th>View Order</th>
+                        <th>Confirm</th>
+                    </thead>
+
+                    <tbody>
+                       
+                        <tr *ngFor="let order of allOrders | adminOrdersPipe: searchProduct ;let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ order.userName }}</td>
+                            <td>{{ order.userPhone }}</td>
+                            <td>{{ order.userCity }}</td>
+                            <td>{{ order.userStreet }}</td>
+                            <td>{{ order.userHouse }}</td>
+                            
+                            <td>
+                                <button (click)="viewItem(order, order.allOrders)" type="button" class="btn-dark btn" data-bs-toggle="modal" data-bs-target="#exampleModal">View order</button>
+                            </td>
+                            <td>
+                                <button (click)="deleteItem(order)" type="button" class="btn-danger btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

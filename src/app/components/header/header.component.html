@@ -1,0 +1,25 @@
+
+
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><a style="background-color: black;" class="logoTitle" [routerLink]="[ '/home' ]">Lion's Crown</a></label>
+    
+    <ul>
+      <!-- <li><a data-bs-toggle="modal" data-bs-target="#exampleModal">Sign in</a></li>
+      <li><a data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</a></li> -->
+      <li><a [routerLink]="[ '/admin' ]" routerLinkActive="active">Admin</a></li>
+      <!-- <li><a [routerLink]="[ '/works' ]" routerLinkActive="active">Works</a></li> -->
+      <li><a [routerLink]="[ '/services' ]" routerLinkActive="active">Services</a></li>
+      <!-- <li><a [routerLink]="[ '/info' ]" routerLinkActive="active">Information</a></li> -->
+      <li><a [routerLink]="[ '/contact' ]" routerLinkActive="active">Contact</a></li>
+      <!-- <li><a [routerLink]="[ '/news' ]" routerLinkActive="active">News</a></li> -->
+      <li class="basketIcon"><a [routerLink]="[ '/basket' ]" routerLinkActive="active"><i class="fas fa-shopping-cart"><span class="countOrders">{{ordersCount}}</span></i></a></li>
+    </ul>
+
+    
+  
+  </nav>

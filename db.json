@@ -1,0 +1,1199 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": 3,
+      "userName": "Slava",
+      "userPhone": "+38099101522",
+      "userCity": "Lviv",
+      "userStreet": "Dragana",
+      "userHouse": "34",
+      "allOrders": [
+        {
+          "id": 19,
+          "className": "Furniture",
+          "type": "eyeDoor",
+          "name": "eyeDoorName",
+          "article": "saurumb",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "eyeDoor",
+          "containment": [
+            "eyeDoor"
+          ],
+          "decoration": "eyeDoor",
+          "furniture": [
+            "eyeDoor"
+          ],
+          "construction": [
+            "eyeDoor"
+          ],
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "count": 3
+        }
+      ],
+      "totalPrice": 0,
+      "userComment": "comment"
+    },
+    {
+      "id": 4,
+      "userName": "Egor",
+      "userPhone": "12331441",
+      "userCity": "Kropiv",
+      "userStreet": "Cobza",
+      "userHouse": "22",
+      "allOrders": [
+        {
+          "id": 1,
+          "className": "Entrace",
+          "type": "SHEFFIELD",
+          "name": "SHEFFIELD AURUM BRAUN1",
+          "article": "saurumb",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "60days",
+          "containment": [
+            "min vata', 'double conture"
+          ],
+          "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+          "furniture": [
+            "SHEFFIELD",
+            "SHEFFIELD"
+          ],
+          "construction": [
+            "SHEFFIELD",
+            "SHEFFIELD"
+          ],
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "productPreparing": "70days",
+          "count": null
+        },
+        {
+          "id": 47,
+          "className": "Entrace",
+          "type": "SHEFFIELD",
+          "name": "TEST",
+          "article": "TEST",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "TEST",
+          "containment": "TEST",
+          "decoration": "TEST",
+          "furniture": "TEST",
+          "construction": "TEST",
+          "brand": "",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "count": null
+        },
+        {
+          "id": 8,
+          "className": "Interior",
+          "type": "CLASSIC",
+          "name": "CLASSIC Interior",
+          "article": "saurumb",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "60days",
+          "containment": [
+            "min vata', 'double conture"
+          ],
+          "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+          "furniture": [
+            "CLASSIC Interior",
+            "CLASSIC Interior"
+          ],
+          "construction": [
+            "CLASSIC Interior",
+            "CLASSIC Interior"
+          ],
+          "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "count": null
+        },
+        {
+          "id": 9,
+          "className": "Interior",
+          "type": "CLASSIC",
+          "name": "CLASSIC Interior",
+          "article": "saurumb",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "60days",
+          "containment": [
+            "min vata', 'double conture"
+          ],
+          "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+          "furniture": [
+            "CLASSIC Interior",
+            "CLASSIC Interior"
+          ],
+          "construction": [
+            "CLASSIC Interior",
+            "CLASSIC Interior"
+          ],
+          "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "count": null
+        },
+        {
+          "id": 25,
+          "className": "Interior",
+          "type": "CLASSIC",
+          "name": "fsds",
+          "article": "ds",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "s",
+          "containment": "df",
+          "decoration": "dfs",
+          "furniture": "dfs",
+          "construction": "d",
+          "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "productPreparing": "s",
+          "count": null
+        },
+        {
+          "id": 33,
+          "className": "Interior",
+          "type": "CLASSIC",
+          "name": "TEST",
+          "article": "TEST",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "TEST",
+          "containment": "TEST",
+          "decoration": "TEST",
+          "furniture": "TEST",
+          "construction": "TEST",
+          "brand": "",
+          "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fd053dce4-9267-40e9-bec6-00d4684d6679.jpeg?alt=media&token=c1cc42b4-1388-4b18-badb-12686d8341a1",
+          "count": null
+        }
+      ],
+      "totalPrice": 0,
+      "userComment": "qweqrqwr"
+    },
+    {
+      "id": 5,
+      "userName": "Valera",
+      "userPhone": "+12345676789",
+      "userCity": "Donbass",
+      "userStreet": "Street ",
+      "userHouse": "55",
+      "allOrders": [
+        {
+          "id": 12,
+          "className": "Furniture",
+          "type": "handle",
+          "name": "handleName",
+          "article": "saurumb",
+          "avalible": true,
+          "individualSize": true,
+          "preparingTime": "handle",
+          "containment": [
+            "handle"
+          ],
+          "decoration": "handle",
+          "furniture": [
+            "handle"
+          ],
+          "construction": [
+            "handle"
+          ],
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+          "count": 2
+        },
+        {
+          "id": 38,
+          "name": "TEST2",
+          "article": "TEST2",
+          "minSize": "TEST2",
+          "maxSize": "TEST2",
+          "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fd1953baf-7fb9-486c-a07a-37f1bccb1c6c.jpeg?alt=media&token=1dffe1c4-c0fb-443f-8a37-39cc173591e6",
+          "description": "TEST2",
+          "count": 3,
+          "price": "150"
+        }
+      ],
+      "totalPrice": 450,
+      "userComment": "Comment"
+    }
+  ],
+  "woodProducts": [
+    {
+      "id": 37,
+      "name": "TEST",
+      "article": "TEST",
+      "minSize": "TEST",
+      "maxSize": "TEST",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fec955018-d088-4a59-99a6-0ebeca53e196.jpeg?alt=media&token=0f0ce7d8-9a13-413c-8bd3-d659e82019b1",
+      "description": "TEST",
+      "count": 1,
+      "price": "100"
+    },
+    {
+      "id": 38,
+      "name": "TEST2",
+      "article": "TEST2",
+      "minSize": "TEST2",
+      "maxSize": "TEST2",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fd1953baf-7fb9-486c-a07a-37f1bccb1c6c.jpeg?alt=media&token=1dffe1c4-c0fb-443f-8a37-39cc173591e6",
+      "description": "TEST2",
+      "count": 1,
+      "price": "150"
+    },
+    {
+      "id": 40,
+      "name": "Wood Product1",
+      "article": "article",
+      "minSize": "10x10",
+      "maxSize": "100x100",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F905161e1-43c4-4b56-8e52-529281e8ddcd.jpeg?alt=media&token=ac07dd81-ea23-4418-b7db-3ec2a52d259c",
+      "description": "dsaas",
+      "count": "1",
+      "price": "150"
+    },
+    {
+      "id": 41,
+      "name": "Wood Product2",
+      "article": "article",
+      "minSize": "10x10",
+      "maxSize": "100x100",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F3de44229-3ca3-4584-be0f-bf884280e994.jpeg?alt=media&token=68cf319e-2b64-4713-99be-491cf66fb3b4",
+      "description": "adsdsa",
+      "count": "1",
+      "price": "210"
+    },
+    {
+      "id": 42,
+      "name": "Wood Product3",
+      "article": "article",
+      "minSize": "10x10",
+      "maxSize": "100x100",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fc4f21828-574a-4ddc-8b2a-fbcabdefc26c.jpeg?alt=media&token=70581a3b-f645-4980-ae74-6c5661397dbf",
+      "description": "description",
+      "count": "1",
+      "price": "360"
+    },
+    {
+      "id": 43,
+      "name": "Wood Product4",
+      "article": "article",
+      "minSize": "10x10",
+      "maxSize": "100x100",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Ff435c9cd-cde3-46c6-87b7-858d8f5ae788.jpeg?alt=media&token=9f46d1c9-7d4e-4e3b-a099-fa67f4e10e33",
+      "description": "description",
+      "count": "1",
+      "price": "1300"
+    },
+    {
+      "id": 44,
+      "name": "sda",
+      "article": "dsa",
+      "minSize": "asd",
+      "maxSize": "asd",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F44badb31-ffd6-4172-864d-cff57a317297.jpeg?alt=media&token=654e9e6c-c62a-4f75-a74e-0bce49196cf5",
+      "description": "desc",
+      "count": "1",
+      "price": "995"
+    },
+    {
+      "id": 45,
+      "name": "Icona",
+      "article": "ic100",
+      "minSize": "100x100",
+      "maxSize": "100x125",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F6ccf8c81-4c7f-4616-85c4-78178e1de594.jpeg?alt=media&token=6841c589-049a-46e6-8516-5a06467b11d4",
+      "description": "Description",
+      "count": "1",
+      "price": "400"
+    },
+    {
+      "id": 46,
+      "name": "Earth",
+      "article": "earth",
+      "minSize": "100x100",
+      "maxSize": "1000x300",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F5bffb564-f9b9-4ad6-b807-c49ddd96901f.png?alt=media&token=845ac25e-c0b5-40d6-b8ca-bc5af5887c50",
+      "description": "Descriptiom",
+      "count": 1,
+      "price": "900"
+    }
+  ],
+  "doorsList": [
+    {
+      "id": 1,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "SHEFFIELD AURUM BRAUN1",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "SHEFFIELD",
+        "SHEFFIELD"
+      ],
+      "construction": [
+        "SHEFFIELD",
+        "SHEFFIELD"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "70days"
+    },
+    {
+      "id": 3,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "SHEFFIELD AURUM BRAUN2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "SHEFFIELD",
+        "SHEFFIELD"
+      ],
+      "construction": [
+        "SHEFFIELD",
+        "SHEFFIELD"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "70days"
+    },
+    {
+      "id": 4,
+      "className": "Entrace",
+      "type": "HPL",
+      "name": "HPL AURUM BRAUN",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "HPL",
+        "HPL"
+      ],
+      "construction": [
+        "HPL",
+        "HPL"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 5,
+      "className": "Entrace",
+      "type": "HPL",
+      "name": "HPL AURUM BRAUN",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "HPL",
+        "HPL"
+      ],
+      "construction": [
+        "HPL",
+        "HPL"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "60days"
+    },
+    {
+      "id": 6,
+      "className": "Entrace",
+      "type": "CLASSIC",
+      "name": "CLASSIC AURUM BRAUN",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "CLASSIC",
+        "CLASSIC"
+      ],
+      "construction": [
+        "CLASSIC",
+        "CLASSIC"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 7,
+      "className": "Entrace",
+      "type": "CLASSIC",
+      "name": "CLASSIC AURUM BRAUN",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "CLASSIC",
+        "CLASSIC"
+      ],
+      "construction": [
+        "CLASSIC",
+        "CLASSIC"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 8,
+      "className": "Interior",
+      "type": "CLASSIC",
+      "name": "CLASSIC Interior",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "CLASSIC Interior",
+        "CLASSIC Interior"
+      ],
+      "construction": [
+        "CLASSIC Interior",
+        "CLASSIC Interior"
+      ],
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 9,
+      "className": "Interior",
+      "type": "CLASSIC",
+      "name": "CLASSIC Interior",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "60days",
+      "containment": [
+        "min vata', 'double conture"
+      ],
+      "decoration": "МДФ оздоблено HPL панелями (ламінат пресовоний під високим тиском)",
+      "furniture": [
+        "CLASSIC Interior",
+        "CLASSIC Interior"
+      ],
+      "construction": [
+        "CLASSIC Interior",
+        "CLASSIC Interior"
+      ],
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 10,
+      "className": "Furniture",
+      "type": "lock",
+      "brand": "kale",
+      "name": "lockName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "lock",
+      "containment": [
+        "lock"
+      ],
+      "decoration": "lock",
+      "furniture": [
+        "lock"
+      ],
+      "construction": [
+        "lock"
+      ],
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 10,
+      "className": "Furniture",
+      "type": "lock",
+      "brand": "apecs",
+      "name": "lockName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "lock",
+      "containment": [
+        "lock"
+      ],
+      "decoration": "lock",
+      "furniture": [
+        "lock"
+      ],
+      "construction": [
+        "lock"
+      ],
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 10,
+      "className": "Furniture",
+      "type": "lock",
+      "brand": "motura",
+      "name": "lockName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "lock",
+      "containment": [
+        "lock"
+      ],
+      "decoration": "lock",
+      "furniture": [
+        "lock"
+      ],
+      "construction": [
+        "lock"
+      ],
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 10,
+      "className": "Furniture",
+      "type": "lock",
+      "brand": "iseo",
+      "name": "lockName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "lock",
+      "containment": [
+        "lock"
+      ],
+      "decoration": "lock",
+      "furniture": [
+        "lock"
+      ],
+      "construction": [
+        "lock"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 11,
+      "className": "Furniture",
+      "type": "lock",
+      "brand": "serrature",
+      "name": "lockName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "lock",
+      "containment": [
+        "lock"
+      ],
+      "decoration": "lock",
+      "furniture": [
+        "lock"
+      ],
+      "construction": [
+        "lock"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 12,
+      "className": "Furniture",
+      "type": "handle",
+      "name": "handleName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "handle",
+      "containment": [
+        "handle"
+      ],
+      "decoration": "handle",
+      "furniture": [
+        "handle"
+      ],
+      "construction": [
+        "handle"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 13,
+      "className": "Furniture",
+      "type": "handle",
+      "name": "handleName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "handle",
+      "containment": [
+        "handle"
+      ],
+      "decoration": "handle",
+      "furniture": [
+        "handle"
+      ],
+      "construction": [
+        "handle"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "handle",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 14,
+      "className": "Furniture",
+      "type": "armourCover",
+      "name": "armourCoverName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "armourCover",
+      "containment": [
+        "armourCover"
+      ],
+      "decoration": "armourCover",
+      "furniture": [
+        "armourCover"
+      ],
+      "construction": [
+        "armourCover"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 15,
+      "className": "Furniture",
+      "type": "armourCover",
+      "name": "armourCoverName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "armourCover",
+      "containment": [
+        "armourCover"
+      ],
+      "decoration": "armourCover",
+      "furniture": [
+        "armourCover"
+      ],
+      "construction": [
+        "armourCover"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "armourCover",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 16,
+      "className": "Furniture",
+      "type": "cylinder",
+      "name": "cylinderName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "cylinder",
+      "containment": [
+        "cylinder"
+      ],
+      "decoration": "cylinder",
+      "furniture": [
+        "cylinder"
+      ],
+      "construction": [
+        "cylinder"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 17,
+      "className": "Furniture",
+      "type": "cylinder",
+      "name": "cylinderName1",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "cylinder",
+      "containment": [
+        "cylinder"
+      ],
+      "decoration": "cylinder",
+      "furniture": [
+        "cylinder"
+      ],
+      "construction": [
+        "cylinder"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "cylinder",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 18,
+      "className": "Furniture",
+      "type": "cylinder",
+      "name": "cylinderName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "cylinder",
+      "containment": [
+        "cylinder"
+      ],
+      "decoration": "cylinder",
+      "furniture": [
+        "cylinder"
+      ],
+      "construction": [
+        "cylinder"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 19,
+      "className": "Furniture",
+      "type": "eyeDoor",
+      "name": "eyeDoorName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "eyeDoor",
+      "containment": [
+        "eyeDoor"
+      ],
+      "decoration": "eyeDoor",
+      "furniture": [
+        "eyeDoor"
+      ],
+      "construction": [
+        "eyeDoor"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 20,
+      "className": "Furniture",
+      "type": "eyeDoor",
+      "name": "eyeDoorName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "eyeDoor",
+      "containment": [
+        "eyeDoor"
+      ],
+      "decoration": "eyeDoor",
+      "furniture": [
+        "eyeDoor"
+      ],
+      "construction": [
+        "eyeDoor"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 21,
+      "className": "Furniture",
+      "type": "keyCover",
+      "name": "keyCoverName",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "keyCover",
+      "containment": [
+        "keyCover"
+      ],
+      "decoration": "keyCover",
+      "furniture": [
+        "keyCover"
+      ],
+      "construction": [
+        "keyCover"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 22,
+      "className": "Furniture",
+      "type": "keyCover",
+      "name": "keyCoverName2",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "keyCover",
+      "containment": [
+        "keyCover"
+      ],
+      "decoration": "keyCover",
+      "furniture": [
+        "keyCover"
+      ],
+      "construction": [
+        "keyCover"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 23,
+      "className": "Furniture",
+      "type": "keyCover",
+      "name": "keyCoverName3",
+      "article": "saurumb",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "keyCover",
+      "containment": [
+        "keyCover"
+      ],
+      "decoration": "keyCover",
+      "furniture": [
+        "keyCover"
+      ],
+      "construction": [
+        "keyCover"
+      ],
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "price": "400",
+      "description": "Description"
+    },
+    {
+      "id": 24,
+      "className": "Entrace",
+      "type": "Custom type",
+      "name": "SHEFFIELD AURUM 777",
+      "article": "777",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "777",
+      "containment": "777",
+      "decoration": "777",
+      "furniture": "777",
+      "construction": "777",
+      "image": "https://korona-leva.lviv.ua/images/stories/virtuemart/product/dsc04209.jpg"
+    },
+    {
+      "id": 25,
+      "className": "Interior",
+      "type": "CLASSIC",
+      "name": "fsds",
+      "article": "ds",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "s",
+      "containment": "df",
+      "decoration": "dfs",
+      "furniture": "dfs",
+      "construction": "d",
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe",
+      "productPreparing": "s"
+    },
+    {
+      "id": 26,
+      "className": "Entrace",
+      "type": "HPL",
+      "name": "dasasd",
+      "article": "asd",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "asd",
+      "containment": "dsasad",
+      "decoration": "dasasd",
+      "furniture": "asdasd",
+      "construction": "asddsa",
+      "image": "https://korona-leva.lviv.ua/images/stories/virtuemart/product/dsc04209.jpg"
+    },
+    {
+      "id": 28,
+      "className": "Furniture",
+      "type": "handle",
+      "name": "1111",
+      "article": "11111",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "",
+      "containment": "",
+      "decoration": "",
+      "furniture": "",
+      "construction": "",
+      "brand": "",
+      "image": "https://korona-leva.lviv.ua/images/stories/virtuemart/product/dsc04209.jpg",
+      "price": "1111",
+      "description": "11111",
+      "productPreparing": ""
+    },
+    {
+      "id": 29,
+      "className": "Furniture",
+      "type": "handle",
+      "name": "assada",
+      "article": "sadads",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "",
+      "containment": "",
+      "decoration": "",
+      "furniture": "",
+      "construction": "",
+      "brand": "",
+      "image": "https://korona-leva.lviv.ua/images/stories/virtuemart/product/dsc04209.jpg",
+      "price": "400",
+      "description": "asdsda"
+    },
+    {
+      "id": 30,
+      "className": "Furniture",
+      "type": "lock",
+      "name": "sadads",
+      "article": "sdaadsa",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "",
+      "containment": "",
+      "decoration": "",
+      "furniture": "",
+      "construction": "",
+      "brand": "apecs",
+      "image": "https://korona-leva.lviv.ua/images/stories/virtuemart/product/dsc04209.jpg",
+      "price": "4190",
+      "description": "asdasd",
+      "productPreparing": ""
+    },
+    {
+      "id": 31,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "asd",
+      "article": "das",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "das",
+      "containment": "dsa",
+      "decoration": "dsa",
+      "furniture": "ads",
+      "construction": "da",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14"
+    },
+    {
+      "id": 32,
+      "className": "Furniture",
+      "type": "lock",
+      "name": "das",
+      "article": "ads",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "",
+      "containment": "",
+      "decoration": "",
+      "furniture": "",
+      "construction": "",
+      "brand": "apecs",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Ffea72a74-8a9a-4328-a26a-343d7b4755d8.jpeg?alt=media&token=2bed6707-d084-4412-9ab1-a6ef6fd24bd0",
+      "price": "490",
+      "description": "sdasda"
+    },
+    {
+      "id": 33,
+      "className": "Interior",
+      "type": "CLASSIC",
+      "name": "TEST",
+      "article": "TEST",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "TEST",
+      "containment": "TEST",
+      "decoration": "TEST",
+      "furniture": "TEST",
+      "construction": "TEST",
+      "brand": "",
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F15471ff5-be55-41ef-b473-60366131b2c8.jpeg?alt=media&token=41d36c31-437c-4fa4-b357-accc12912a14",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Fd053dce4-9267-40e9-bec6-00d4684d6679.jpeg?alt=media&token=c1cc42b4-1388-4b18-badb-12686d8341a1"
+    },
+    {
+      "id": 34,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "SSS",
+      "article": "SSS",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "SSS",
+      "containment": "SSS",
+      "decoration": "SSS",
+      "furniture": "SS",
+      "construction": "SSS",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F533b4d13-1899-4d4e-a5fb-0122d8262dcf.jpeg?alt=media&token=d8b3afdb-a2f7-4e68-a5ac-059fa7580dc3"
+    },
+    {
+      "id": 35,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "TEST2",
+      "article": "TEST2",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "TEST2",
+      "containment": "TEST2",
+      "decoration": "TEST2",
+      "furniture": "TEST2",
+      "construction": "TEST2",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F5326d5d5-684a-435b-8869-a5ee30b8f0a4.jpeg?alt=media&token=a35119a1-bfc1-4327-b2f9-51c98fbb944e"
+    },
+    {
+      "id": 36,
+      "className": "Entrace",
+      "type": "HPL",
+      "name": "TEST35",
+      "article": "TEST35",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "TEST35",
+      "containment": "TEST35",
+      "decoration": "TEST35",
+      "furniture": "TEST35",
+      "construction": "TEST35",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F709d09e0-229e-42e8-aacd-c4fad92026ae.jpeg?alt=media&token=fd577843-e67a-49e1-9874-dbaa450a791a"
+    },
+    {
+      "id": 39,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "SHEFFIELD AURUM 888",
+      "article": "TEST0",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "TEST2",
+      "containment": "TEST2",
+      "decoration": "TEST2",
+      "furniture": "TEST2",
+      "construction": "TEST2",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2Ff6ee12b3-7751-444a-84d7-bdf16e3183ff.jpeg?alt=media&token=4dfb192b-9c64-4af9-ad07-b923db1374c8"
+    },
+    {
+      "id": 47,
+      "className": "Entrace",
+      "type": "SHEFFIELD",
+      "name": "TEST",
+      "article": "TEST",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "TEST",
+      "containment": "TEST",
+      "decoration": "TEST",
+      "furniture": "TEST",
+      "construction": "TEST",
+      "brand": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F06bca380-2471-4edb-a2fb-f5f5119c61cb.jpeg?alt=media&token=1d6e3458-281c-42ab-af0f-5471802f8ebe"
+    },
+    {
+      "id": 48,
+      "className": "Furniture",
+      "type": "keyCover",
+      "name": "KEYCOVER",
+      "article": "cover",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "",
+      "containment": "",
+      "decoration": "",
+      "furniture": "",
+      "construction": "",
+      "brand": "",
+      "images": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F018f49ee-9031-46de-b1f1-f707cb242fa9.jpeg?alt=media&token=e2bce028-1e88-443f-a36c-58a81d648607",
+      "price": "490",
+      "description": "21131331"
+    },
+    {
+      "id": 49,
+      "className": "Entrace",
+      "type": "CLASSIC",
+      "name": "INTERIOR",
+      "article": "INTERIOR",
+      "avalible": true,
+      "individualSize": true,
+      "preparingTime": "INTERIOR",
+      "containment": "INTERIOR",
+      "decoration": "INTERIOR",
+      "furniture": "INTERIOR",
+      "construction": "INTERIOR",
+      "brand": "",
+      "categoryImage": "https://firebasestorage.googleapis.com/v0/b/lion-scrown.appspot.com/o/images%2F304d85ca-91be-40c0-8f63-55dda306e26b.jpeg?alt=media&token=4d5e8fc9-6f52-41c4-b3c6-55f909bb5d71"
+    }
+  ]
+}

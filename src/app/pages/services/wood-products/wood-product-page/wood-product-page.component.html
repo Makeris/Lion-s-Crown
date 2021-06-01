@@ -1,0 +1,43 @@
+<main style="color: white; padding: 80px 5%;">
+    <h4 *ngFor="let item of currentItem" style="text-align: center; text-transform: uppercase;">{{item.name}}</h4>
+
+    <nav  style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol style="text-transform: uppercase; background-color: black; margin-bottom: 30px; font-size: 1rem;" class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page" [routerLink]="[ '/services']">Services</li>
+            <li class="breadcrumb-item" [routerLink]="[ '/services/woodProducts']">Wood PRODUCTS</li>
+            <li class="breadcrumb-item active" aria-current="page">{{product?.name}}</li>
+        </ol>
+    </nav>
+    <div class="text-center">
+        <img [src]="product?.image" class="rounded" alt="...">
+    </div>
+
+
+    <div class="productInfo">
+       
+        <p><span class="boldTitle">Article:</span> {{product?.article | uppercase}}</p>
+        <p><span class="boldTitle">Minimal Size:</span> {{product?.minSize}}</p>
+        <p><span class="boldTitle">Maximal Size:</span> {{product?.maxSize}}</p>
+
+        <p style="max-width: 300px;"><span class="boldTitle">Description:</span> <br> {{product?.description}}</p>
+        
+        <div class="counterWrapper">
+            <div class="couterButtons">
+                <div class="counterButton" (click)="productCount(product, false)"><i class="fas fa-angle-left"></i>
+                </div>
+                <input disabled class="counterInput" type="text" [value]="currentProductCount">
+                <div class="counterButton" (click)="productCount(product, true)"><i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="counterBasket">
+                <button (click)="addToBasket(product)" class="btn-dark btn-block btn basketButton"><i
+                        class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+        <!-- COUNTER -->
+    </div>
+
+
+
+
+</main>

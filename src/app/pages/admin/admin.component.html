@@ -1,0 +1,274 @@
+
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Info about product:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Name:</p>
+                <p>{{currentItemView?.name}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Class:</p>
+                <p>{{currentItemView?.className}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Type:</p>
+                <p>{{currentItemView?.type}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Article:</p>
+                <p>{{currentItemView?.article}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">individual Size:</p>
+                <p>{{currentItemView?.individualSize}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Preparing Time:</p>
+                <p>{{currentItemView?.preparingTime}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Containment:</p>
+                <p>{{currentItemView?.containment}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Decoration:</p>
+                <p>{{currentItemView?.decoration}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Furniture:</p>
+                <p>{{currentItemView?.furniture}}</p>
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Brand:</p>
+                <p>{{currentItemView?.brand}}</p>
+            </div>
+            <div class="itemInfo">
+                <p class="fontWeightBold mr-1">Image:</p>
+                <img [src]="currentItemView?.image" class="card-img-top" alt="...">
+                <!-- <img src="" [src]="currentItemView?.images" class="img-thumbnail" alt="..."> -->
+            </div>
+            <div class="itemInfo d-flex">
+                <p class="fontWeightBold mr-1">Price:</p>
+                <p>{{currentItemView?.price}}</p>
+            </div>
+            
+           
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Create new product</h5>
+          <button (click)="clearFields()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <p class="mt-2">Class:</p>
+                <select (change)="selector()" [(ngModel)]="classSelector" name="classSelector" class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example">
+                    <option disabled (click)="clearFields()" value="" selected>Select class...</option>
+                    <option  style="text-transform: uppercase;" *ngFor="let productClass of allProductsClasses" (value)="productClass">{{productClass}}</option>
+                </select>
+                <div *ngIf="classSelector != '' && classSelector != 'furniture'" class="createItemBlock">
+                <!-- <div *ngIf="classSelector != ''" class="createItemBlock"> -->
+
+                   
+                    <p class="mt-2">Type:</p>
+                    <select (change)="fieldsTest(); getCurrentImage(productType)" [(ngModel)]="productType" name="productType"  class="form-select form-select-lg mt-3 mb-3 form-control" aria-label=".form-select-lg example">
+                        <option value="" selected>Select type...</option>
+                        <option *ngFor="let productClass of selectedProductClass" (value)="productClass">{{productClass | uppercase}}</option>
+                    </select>
+
+                
+                    
+                    <div class="completeItem">
+                        <p class="mt-2">Name:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productName" name="productName" type="text" class="form-control " placeholder="Enter name...">
+                        <p class="mt-2">Article:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productArticle" name="productArticle" type="text" class="form-control " placeholder="Enter article...">
+                        <p class="mt-2"> Preparing:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productPreparing" name="productPreparing" type="text" class="form-control mt-1" placeholder="Enter preparing time...">
+                        <p class="mt-2">Containment:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productContainment" name="productContainment" type="text" class="form-control mt-1" placeholder="Enter containment...">
+                        <p class="mt-2">Decoration:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productDecoration" name="productDecoration" type="text" class="form-control mt-1" placeholder="Enter decotarion...">
+                        <p class="mt-2">Furniture:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productFurniture" name="productFurniture" type="text" class="form-control mt-1" placeholder="Enter furniture...">
+                        <p class="mt-2">Construction:</p>
+                        <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="productConstruction" name="productConstruction" type="text" class="form-control mt-1" placeholder="Enter construction...">
+                        <p class="mt-2">Image:</p>
+                       
+                        <div class="custom-file">
+                            <label  for="my-input" class="custom-file-label">Upload image</label>
+                            <input [(ngModel)]="productImageInput" (change)="uploadFile($event)" id="my-input" class="custom-file-input" type="file" name="productImageInput">
+                        </div>
+                        <div class="progress mt-3">
+                            <div id="progressImg" class="progress-bar progress-bar-striped bg-dark" [style.width]="(uploadProgress | async) + '%' " role="progressbar" 
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div *ngIf="classSelector == 'furniture'">
+            
+                    <p class="mt-2">Type:</p>
+                    <select (change)="fieldsTest();" [(ngModel)]="productType" name="productType"  class="form-select form-select-lg mt-3 mb-3 form-control" aria-label=".form-select-lg example">
+                        <option value="" selected>Select type...</option>
+                        <option style="text-transform: uppercase;" *ngFor="let productClass of selectedProductClass" (value)="productClass">{{productClass}}</option>
+                    </select>
+                    <p class="mt-2">Name:</p>
+                    <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="furnitureName" name="furnitureName" type="text" class="form-control mt-1" placeholder="Enter name...">
+                    <p *ngIf="productType == 'lock'" class="mt-2">Brand:</p>
+                    <select *ngIf="productType == 'lock'" (change)="fieldsTest();" [(ngModel)]="furnitureBrand" name="furnitureBrand"  class="form-select form-select-lg mt-3 mb-3 form-control" aria-label=".form-select-lg example">
+                        <option value="" selected >Select type...</option>
+                        <option style="text-transform: uppercase;" *ngFor="let productBrand of productBrands" (value)="productClass">{{productBrand}}</option>
+                    </select>
+                    <!-- <input *ngIf="productType == 'lock'"(keyup)="fieldsTest()" [(ngModel)]="furnitureBrand" name="furnitureBrand" type="text" class="form-control mt-1" placeholder="Enter brand..."> -->
+                    <p class="mt-2">Article:</p>
+                    <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="furnitureArticle" name="furnitureArticle" type="text" class="form-control mt-1" placeholder="Enter article...">
+                    <p class="mt-2">Descriprion:</p>
+                    <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="furnitureDescriprion" name="furnitureDescriprion" type="text" class="form-control mt-1" placeholder="Enter description...">
+                    <p class="mt-2">Price:</p>
+                    <input autocomplete="off" (keyup)="fieldsTest()" [(ngModel)]="furniturePrice" name="furniturePrice" type="text" class="form-control mt-1" placeholder="Enter price...">
+                    <p class="mt-2">Image:</p>
+                    <div class="custom-file">
+                        <label  for="my-input" class="custom-file-label">Upload image</label>
+                        <input (change)="uploadFile($event)" id="my-input" class="custom-file-input" type="file" name="">
+                    </div>
+                    <div class="progress mt-3">
+                        <div id="progressImg" class="progress-bar progress-bar-striped bg-dark" [style.width]="(uploadProgress | async) + '%' " role="progressbar" 
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </form>
+
+
+
+          
+        </div>
+        <div class="modal-footer">
+        
+          <button *ngIf="isCreate" (click)="addNewProductInDB(); clearFields()" type="button" [disabled]="isFieldsFulled" class="btn btn-success" data-bs-dismiss="modal">Add new</button>
+          <button (click)="clearFields()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="isEdit" (click)="saveEdit()" type="button" class="btn btn-primary" [disabled]="isFieldsFulled" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  <h4 style="text-align: center; text-transform: uppercase;">Admin</h4>
+  <main style="color: white; padding: 80px 5%;">
+        
+
+
+    <div class="adminPanel">
+
+        <aside class="adminAside">
+            
+            <div class="btn-group-vertical d-grid gap-2">
+                
+                <a [routerLink]="[ '/admin' ]">
+                    <button class="btn-dark btn">Door Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminWoodProducts' ]">
+                    <button class="btn-dark btn">Wood Products</button>
+                </a>
+                <a [routerLink]="[ '/admin/adminOrders' ]">
+                    <button class="btn-dark btn">All orders</button>
+                </a>
+                <!-- <a [routerLink]="[ '/admin/usersList' ]">
+                    <button class="btn-dark btn">All Users</button>
+                </a> -->
+                <a [routerLink]="[ '/admin/subCategory' ]">
+                    <button class="btn-dark btn">Sub Categoty & else</button>
+                </a>
+                <!-- <butыton class="btn-dark btn"></button> -->
+                <!-- <button class="btn-dark btn">Button</button>
+                <button class="btn-dark btn">Button</button> -->
+              </div>
+        </aside>
+
+
+        <div class="adminPanelFields">
+            <div class="newProductField">
+
+                <div class="searcher d-flex">
+                    <input [(ngModel)]="searchProduct" name="searchProduct" type="text" class="form-control" placeholder="Search product...">
+                    <button (click)="isCreate = true; isEdit = false; clearFields(); getCureentLastID()" class="btn-success btn-block btn ml-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add new product</button>
+                </div>
+
+                <table class="adminProductsTable table table-light">
+                    <thead>
+                        <th>ID</th>
+                        <th>Class</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Article</th>
+                        <th>Information</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                       
+                        <tr *ngFor="let product of allProducts | adminProductsPipe: searchProduct ;let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ product.className | uppercase}}</td>
+                            <td>{{ product.type | uppercase }}</td>
+                            <td>{{ product.name | uppercase }}</td>
+                            <td>{{ product.article | uppercase }}</td>
+                            <td>
+                                <button (click)="viewItem(product)" type="button" class="btn-dark btn" data-bs-toggle="modal" data-bs-target="#exampleModal" >View</button>
+                            </td>
+                            <td>
+                                <button (click)="editItem(product); isEdit = true; isCreate = false" type="button" class="btn-warning btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button>
+                            </td>
+                            <td>
+                                <button (click)="deleteItem(product)" type="button" class="btn-danger btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+   
+
+   
+
+
+   
+
+
+</main>

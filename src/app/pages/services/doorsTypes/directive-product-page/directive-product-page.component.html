@@ -1,0 +1,120 @@
+<main style="color: white; padding: 80px 5%;">
+
+
+    <h4 style="text-align: center; text-transform: uppercase;">{{directiveItem?.name}}</h4>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol style="text-transform: uppercase; background-color: black; margin-bottom: 30px; font-size: 1rem;" class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page" [routerLink]="[ '/services']">Services</li>
+            <li class="breadcrumb-item" aria-current="page"
+                [routerLink]="[ '/services/', directiveItem?.className | lowercase]">{{directiveItem?.className}}</li>
+            <li class="breadcrumb-item" aria-current="page"
+                [routerLink]="[ '/services/',directiveItem?.className, directiveItem?.type,'productPage']">{{directiveItem?.type}}</li>
+            <li class="breadcrumb-item active" aria-current="page">{{directiveItem?.name}}</li>
+            <!-- <li class="breadcrumb-item active" [routerLink]="[ '/services/', currentClass | lowercase ]">{{currentClass}}</li> -->
+        </ol>
+    </nav>
+
+
+    <div class="text-center directiveProductImage">
+        <img [src]="directiveItem?.image" class="rounded" alt="...">
+    </div>
+
+
+    <!-- FURNITURE -->
+    <div *ngIf="directiveItem?.className.toLowerCase() == 'furniture'" class="productInfo">
+            <!-- <p style="color: red;" *ngIf="directiveItem?.avalible == false">NOT Includes individual size</p> -->
+            <p><span class="boldTitle">Article:</span> {{directiveItem?.article | uppercase}}</p>
+            <p *ngIf="directiveItem?.brand != ''"><span class="boldTitle">Brand:</span> {{directiveItem?.brand | uppercase}}</p>
+            <p style="text-align: center;"><span class="boldTitle">Description:</span> <br> {{directiveItem?.description}}</p>
+            <p><span class="boldTitle">Price:</span> {{directiveItem?.price}}₴</p>
+            <!-- COUNTER -->
+            <div class="counterWrapper">
+                <div class="couterButtons">
+                    <div class="counterButton" (click)="productCount(directiveItem, false)"><i
+                            class="fas fa-angle-left"></i></div>
+                    <input disabled class="counterInput" type="text" [value]="currentProductCount">
+                    <div class="counterButton" (click)="productCount(directiveItem, true)"><i
+                            class="fas fa-angle-right"></i></div>
+                </div>
+                <div class="counterBasket">
+                    <button (click)="addToBasket(directiveItem)" class="btn-dark btn-block btn basketButton"><i
+                            class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- COUNTER -->
+    </div>
+    <!-- FURNITURE -->
+
+
+
+    <!-- ENTRACE -->
+    <div *ngIf="directiveItem?.className.toLowerCase() == 'entrace'" class="productInfo">
+
+        <!-- <div style="max-width: 300px;"> -->
+
+            <p> <span class="boldTitle">Preparing time:</span>{{directiveItem?.preparingTime}}</p>
+            <!-- <p style="color: lime;" *ngIf="directiveItem?.individualSize == true">Includes individual size</p>
+            <p style="color: red;" *ngIf="directiveItem?.individualSize == false">NOT Includes individual size</p> -->
+            <p><span class="boldTitle">Article:</span> {{directiveItem?.article}}</p>
+            <p><span class="boldTitle">Containment:</span> {{directiveItem?.containment}}</p>
+            <p><span class="boldTitle">Decoration:</span> {{directiveItem?.decoration}}</p>
+            <p><span class="boldTitle">Furniture:</span> {{directiveItem?.furniture}}</p>
+            <!-- COUNTER -->
+            <div class="counterWrapper">
+                <div class="couterButtons">
+                    <div class="counterButton" (click)="productCount(directiveItem, false)"><i
+                            class="fas fa-angle-left"></i></div>
+                    <input disabled class="counterInput" type="text" [value]="currentProductCount">
+                    <div class="counterButton" (click)="productCount(directiveItem, true)"><i
+                            class="fas fa-angle-right"></i></div>
+                </div>
+                <div class="counterBasket">
+                    <button (click)="addToBasket(directiveItem)" class="btn-dark btn-block btn basketButton"><i
+                            class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- COUNTER -->
+        <!-- </div> -->
+
+    </div>
+    <!-- ENTRACE -->
+
+
+    <!-- Interior -->
+    <div *ngIf="directiveItem?.className.toLowerCase() == 'interior'" class="productInfo">
+
+        <!-- <div style="max-width: 300px;"> -->
+
+    
+            <p> <span class="boldTitle">Preparing time:</span>{{directiveItem?.preparingTime}}</p>
+            <!-- <p style="color: lime;" *ngIf="directiveItem?.individualSize == true">Includes individual size</p>
+            <p style="color: red;" *ngIf="directiveItem?.individualSize == false">NOT Includes individual size</p> -->
+            <p><span class="boldTitle">Article:</span> {{directiveItem?.article}}</p>
+            <p style="max-width: 300px;"><span  class="boldTitle">Containment:</span> {{directiveItem?.containment}}</p>
+            <p style="max-width: 300px;"><span class="boldTitle">Decoration:</span> {{directiveItem?.decoration}}</p>
+            <p style="max-width: 300px;"><span class="boldTitle">Furniture:</span> {{directiveItem?.furniture}}</p>
+            <!-- COUNTER -->
+            <div  class="counterWrapper">
+                <div class="couterButtons">
+                    <div class="counterButton" (click)="productCount(directiveItem, false)"><i
+                            class="fas fa-angle-left"></i></div>
+                    <input disabled class="counterInput" type="text" [value]="currentProductCount">
+                    <div class="counterButton" (click)="productCount(directiveItem, true)"><i
+                            class="fas fa-angle-right"></i></div>
+                </div>
+                <div class="counterBasket">
+                    <button (click)="addToBasket(directiveItem)" class="btn-dark btn-block btn basketButton"><i
+                            class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <!-- COUNTER -->
+        <!-- </div> -->
+
+    </div>
+    <!-- Interior -->
+
+
+
+
+</main>

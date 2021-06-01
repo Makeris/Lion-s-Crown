@@ -1,0 +1,92 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.counterWrapper {
+
+    margin: 30px auto;
+    // margin-bottom: 100px;
+
+    width: 150px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent,#0008);
+
+}
+
+.couterButtons {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.counterButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.counterInput  {
+    text-align: center;
+    font-weight: bold;
+    overflow: scroll;
+    border-radius: 50%;
+    height: 50px;
+    width: 20px;
+
+    color: white;
+    background-color: black;
+
+    border: 1px solid white;
+    font-size: 1.5em;
+
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+.counterInput::-webkit-scrollbar {
+    width: 0;
+}
+
+.counterBasket {
+    margin-top: 5px;
+}
+
+
+
+.basketButton  {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-family: monospace;
+    border: 1px solid white;
+    background-color: black;
+    &:hover {
+        background-color: gray;
+      }
+}
+
+.boldTitle {
+    margin-right: 3px;
+    color: darkgray;
+    font-weight: bold;
+}
+
+
+.breadcrumb-item {
+    cursor: pointer;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

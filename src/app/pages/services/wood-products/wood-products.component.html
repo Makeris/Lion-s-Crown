@@ -1,0 +1,36 @@
+<main style="color: white; padding: 80px 5%;">
+
+    <h4 style="text-align: center; text-transform: uppercase;">Wood Products</h4>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol  style="text-transform: uppercase; background-color: black; margin-bottom: 30px; font-size: 1rem;" class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page" [routerLink]="[ '/services']">Services</li>
+          
+          <li class="breadcrumb-item active" aria-current="page">Wood PRODUCTS</li>
+          
+          
+        </ol>
+      </nav>
+
+    <div class="entraceDoorsSelector">
+        <div (click)="findItem(product)" [routerLink]="[ '/services/woodProducts' ,product.id]" *ngFor="let product of allWoodProducts; let i = index" class="entraceDoorItem" class="entraceDoorItem">
+        <!-- <div (click)="findItem(product)" [routerLink]="[ '/services/entraceDoors/productPage/WoodProductPage']" *ngFor="let product of allWoodProducts; let i = index" class="entraceDoorItem" class="entraceDoorItem"> -->
+                
+                <div class="test"></div>
+                
+                    <div class="entraceDoorImage">
+                        <img [src]="product.image" class="card-img-top" alt="...">
+                    </div>
+                <div class="entraceDoorTitle"> 
+                    <p style="text-align: center; text-transform: uppercase;">
+                        {{product?.name}}
+                        
+                </div>
+            </div>
+    </div>
+
+   
+
+
+
+</main>
