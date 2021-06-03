@@ -42,6 +42,9 @@ import { AdminSubComponent } from './pages/admin/admin-sub/admin-sub.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+
 // import { AgmCoreModule, AgmMap } from '@agm/core';
 
 
@@ -97,14 +100,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxUiLoaderModule.forRoot(loader),
     NgxUiLoaderRouterModule,
     BrowserAnimationsModule,
-    // AgmMap,
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
-    // })
-  
-    // MatButtonModule,
-    // MatDatepickerModule,
-    // MatFormFieldModule
+    CarouselModule
+   
    
    
   ],

@@ -119,6 +119,20 @@ export class DoorService {
   // }
 
 
+  getSliderFirestore(): any {
+    return this.firestore.collection('sliderImages').ref.get();
+  }
+
+  deleteSliderFS(newObj: any, className: string) {
+    return this.firestore.collection('sliderImages').doc(className).set(newObj);
+  }
+  createSliderFS(newObj: any, className: string) {
+    return this.firestore.collection('sliderImages').doc(className).set(newObj);
+  }
+
+
+
+
 
 
 

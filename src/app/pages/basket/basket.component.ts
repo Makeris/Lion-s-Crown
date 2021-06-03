@@ -37,8 +37,9 @@ export class BasketComponent implements OnInit {
 
   NPListDepartamets;
 
-  mapLat ;
-  mapLng;
+
+  mapLat = 40.000000;
+  mapLng = 42.000000;
 
 
   // @ViewChild('map') divMap: ElementRef;

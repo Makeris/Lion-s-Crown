@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
 import { DoorService } from 'src/app/shared/services/door.service';
 import { WoodProductsService } from 'src/app/shared/services/wood-products.service';
 
@@ -8,6 +10,15 @@ import { WoodProductsService } from 'src/app/shared/services/wood-products.servi
   styleUrls: ['./admin-sub.component.scss']
 })
 export class AdminSubComponent implements OnInit {
+
+
+  uploadProgress: Observable<number>;
+  imagesStorage;
+  sliderImagesArr = [];
+  newImage;
+
+  isImageUploaded = true;
+
 
   categoryImg;
   searchProduct = '';
@@ -38,12 +49,90 @@ export class AdminSubComponent implements OnInit {
 
   constructor(
     private doorService: DoorService,
-    private woodProducts: WoodProductsService
+    private woodProducts: WoodProductsService,
+    private storage: AngularFireStorage,
   ) { }
 
   ngOnInit(): void {
-    this.getAllCategories()
+    this.getAllCategories();
+    this.getImagesFromFB()
   }
+
+
+  getImagesFromFB() {
+    this.doorService.getSliderFirestore().then(res => {
+      this.imagesStorage = res.docs.map(el => el.data());
+
+      this.sliderImagesArr = this.imagesStorage[0].images;
+      this.isImageUploaded = true;
+      
+      
+    })
+  }
+
+  deleteImage(item) {
+    console.log(this.imagesStorage[0]);
+
+    
+    
+
+    let images = [];
+    this.sliderImagesArr.forEach(element => {
+      if(element != item) {
+        images.push(element);
+      }
+    });
+
+    this.imagesStorage[0].images = images;
+    console.log(this.imagesStorage[0]);
+    
+    this.doorService.deleteSliderFS(this.imagesStorage[0], 'arrImages').then(res => {
+      this.getImagesFromFB();
+    })
+ 
+  }
+
+  addNewImage() {
+
+  
+   
+
+    this.sliderImagesArr.push(this.newImage);
+    this.imagesStorage[0].images = this.sliderImagesArr;
+    console.log(this.imagesStorage[0]);
+
+    
+    this.doorService.deleteSliderFS(this.imagesStorage[0], 'arrImages').then(res => {
+      this.getImagesFromFB();
+    })
+
+  }
+
+
+  uploadFile(event) {
+    // console.log('Image');
+    const file = event.target.files[0];
+    const filePath = `images/${this.UUID()}.${file.type.split('/')[1]}`;
+    const task = this.storage.upload(filePath, file);
+    this.uploadProgress = task.percentageChanges();
+    task.then( result => {
+      this.storage.ref(`images/${result.metadata.name}`).getDownloadURL().subscribe(data => {
+        console.log(data);
+        this.newImage = data;
+        this.isImageUploaded = false;
+        
+        
+      })
+    })
+  }
+
+  UUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+       return v.toString(16);
+    });
+ }
+
 
   fieldsCheck() {
     if(this.newBrand != '') {

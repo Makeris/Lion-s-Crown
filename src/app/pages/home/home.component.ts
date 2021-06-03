@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { DoorService } from 'src/app/shared/services/door.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+
+  imagesArr = [];
+
+  constructor(
+    private doorService: DoorService,
+  ) { }
+
+
+  getImagesFromFB() {
+    this.doorService.getSliderFirestore().then(res => {
+      this.imagesArr = res.docs.map(el => el.data())[0].images;
+      
+      
+    })
+  }
+  customOptions: OwlOptions = {
+
+
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 600,
+    navText: ['&#8249', '&#8250;'],
+    responsive: {
+      0: {
+        items: 1 
+      },
+      400: {
+        items: 2
+      },
+      760: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
 
   ngOnInit(): void {
+    this.getImagesFromFB()
   }
+
+  
 
 }

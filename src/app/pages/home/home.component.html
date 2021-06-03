@@ -1,8 +1,17 @@
 <main style="padding: 2%; padding-top: 85px; ">
 
-    <div class="wrapper">
+    <owl-carousel-o [options]="customOptions">
+       
+        <ng-template *ngFor="let image of imagesArr" carouselSlide>
+          <div class="slide">
+            <img [src]="image" alt="img 3">
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+
+    <!-- <div class="wrapper">
         <div class="main" style="background-size: cover;background-repeat: no-repeat; background-position: center;">
-            <!-- newCrown\src\assets\images\after.PNG -->
+           
             <div class="contacts_us">
                 
             </div>
@@ -57,7 +66,7 @@
         <div class="overlay"></div>
         <div class="overlay"></div>
         <div style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" class="overlay"></div>
-    </div>
+    </div> -->
 
 
     <div class="home_history">

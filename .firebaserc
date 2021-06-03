@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "lion-scrown": {
-      "hosting": {
-        "newCrown": [
-          "lion-scrown"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "lion-scrown"
   }

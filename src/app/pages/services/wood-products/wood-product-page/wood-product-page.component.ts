@@ -82,7 +82,7 @@ export class WoodProductPageComponent implements OnInit {
   addToBasket(product): void {
 
     // console.log(JSON.parse(localStorage.getItem('basket')));
-    if(JSON.parse(localStorage.getItem('basket')).length > 0) {
+    if(JSON.parse(localStorage.getItem('basket'))?.length > 0) {
       
       
       this.localProducts = JSON.parse(localStorage.getItem('basket'));
